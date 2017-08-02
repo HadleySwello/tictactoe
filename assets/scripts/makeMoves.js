@@ -1,3 +1,6 @@
+'use strict'
+const winConditions = require('./index.js')
+
 const pads = [
   $('r1c1'),
   $('r1c2'),
@@ -11,13 +14,11 @@ const pads = [
 ]
 
 const makeMove = function () {
-  cardId = this.getAttribute('data-id')
   console.log(this)
-  this.setAttribute('src', cards[cardId].cardImage)
-  cardsInPlay.push(cards[cardId].rank);
-  console.log(cardsInPlay);
-  if (cardsInPlay.length==2){
-    checkForMatch();
+  this.setAttribute('src', pads[padId].frogImage)
+  console.log(numberOfTurns);
+  if (numberOfTurns.length >= 3) {
+    winConditions()
   }
 }
 

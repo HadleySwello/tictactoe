@@ -25,14 +25,18 @@ p {
 
 .container {
   border-color: $lighter-pond-green;
-  border-radius: 5px;
-  display: flex;
+  border-radius: 20px;
+  border-style: solid;
   justify-content: center;
 
-  img {
-    margin: auto;
+  .item {
     max-height: 150px;
     max-width: auto;
     padding: 30px;
+    border-style: solid;
+    margin: auto;
+    border-radius: 5px;
+    border-color: $darker-pond-green;
+    text-align: center;
   }
 }

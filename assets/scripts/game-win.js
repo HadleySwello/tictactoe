@@ -1,6 +1,7 @@
+'use strict'
 // TODO define class (frog)
 
-const winConditions = function (id, frog) {
+const winConditions = function (id, player) {
   let won = 0
   if ($('#r1c1').hasClass(frog) && $('#r1c2').hasClass(frog) && $('#r1c3').hasClass(frog)) {
     won = 1
@@ -22,6 +23,5 @@ const winConditions = function (id, frog) {
 }
 
 module.exports = {
-  winConditions,
-  addClassFrog
+  winConditions
 }
