@@ -19,13 +19,17 @@ h1 {
   text-align: center;
 }
 
+p {
+  text-align: center;
+}
+
 .container {
   border-color: $lighter-pond-green;
   border-radius: 5px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  & img {
+
+  img {
     margin: auto;
     max-height: 150px;
     max-width: auto;
