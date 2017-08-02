@@ -1,7 +1,20 @@
+let count = 0
+
+$(function counter () {
+  console.log('im counting')
+  $('.item').on('click', function () {
+    count += 1
+    console.log(count)
+  })
+})
 
 $(function onClick () {
   $('#r1c1').on('click', function (event) {
-    $('#r1c1').html('X')
+    if (count % 2 === 0) {
+      $('#r1c1').html('O')
+    } if (count % 2 !== 0) {
+      $('#r1c1').html('X')
+    }
   })
 })
 $(function onClick () {
@@ -50,14 +63,5 @@ $(function onClick () {
   $('#r3c3').on('click', function (event) {
     $('#r3c3').html('X')
     console.log('you clicked me')
-  })
-})
-
-$(function counter () {
-  let count = 0
-  console.log('im counting')
-  $('.item').on('click', function () {
-    count += 1
-    console.log(count)
   })
 })
