@@ -29,12 +29,7 @@ button {
   background-color: $darker-pond-green;
   border-color: $darker-pond-green;
   color: $bark-brown;
-  margin: auto;
-  page-break-after: always;
-  page-break-before: always;
-  position: absolute;
   text-align: center;
-  top: 50%;
 }
 
 .container {
@@ -61,8 +56,8 @@ button {
 }
 
 #message {
-  border-style: ridge;
   border-color: $dark-fawn;
+  border-style: ridge;
 }
 
 #sign-up {
