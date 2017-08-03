@@ -7,7 +7,6 @@
 // scripts
 require('./assets/scripts/index.js')
 require('./assets/scripts/makeMoves.js')
-require('./assets/scripts/chooseFrog.js')
 require('./assets/scripts/clickHandler.js')
 
 // styles

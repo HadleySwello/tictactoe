@@ -1,3 +1,4 @@
+const checkForWin = require('./game-win.js')
 let count = 0
 
 $(function counter () {
@@ -8,60 +9,95 @@ $(function counter () {
   })
 })
 
-$(function onClick () {
-  $('#r1c1').on('click', function (event) {
-    if (count % 2 === 0) {
-      $('#r1c1').html('O')
-    } if (count % 2 !== 0) {
-      $('#r1c1').html('X')
-    }
+if ($('.item').html() === '.') {
+  $(function onClick () {
+    $('#1').on('click', function (event) {
+      if (count % 2 === 0) {
+        $('#1').html('O')
+      } if (count % 2 !== 0) {
+        $('#1').html('X')
+      }
+      checkForWin.winConditions()
+    })
   })
-})
-$(function onClick () {
-  $('#r1c2').on('click', function (event) {
-    $('#r1c2').html('X')
-    console.log('you clicked me')
+  $(function onClick () {
+    $('#2').on('click', function (event) {
+      if (count % 2 === 0) {
+        $('#2').html('O')
+      } if (count % 2 !== 0) {
+        $('#2').html('X')
+      }
+      checkForWin.winConditions()
+    })
   })
-})
-$(function onClick () {
-  $('#r1c3').on('click', function (event) {
-    $('#r1c3').html('X')
-    console.log('you clicked me')
+  $(function onClick () {
+    $('#3').on('click', function (event) {
+      if (count % 2 === 0) {
+        $('#3').html('O')
+      } if (count % 2 !== 0) {
+        $('#3').html('X')
+      }
+      checkForWin.winConditions()
+    })
   })
-})
-$(function onClick () {
-  $('#r2c1').on('click', function (event) {
-    $('#r2c1').html('X')
-    console.log('you clicked me')
+  $(function onClick () {
+    $('#4').on('click', function (event) {
+      if (count % 2 === 0) {
+        $('#4').html('O')
+      } if (count % 2 !== 0) {
+        $('#4').html('X')
+      }
+      checkForWin.winConditions()
+    })
   })
-})
-$(function onClick () {
-  $('#r2c2').on('click', function (event) {
-    $('#r2c2').html('X')
-    console.log('you clicked me')
+  $(function onClick () {
+    $('#5').on('click', function (event) {
+      if (count % 2 === 0) {
+        $('#5').html('O')
+      } if (count % 2 !== 0) {
+        $('#5').html('X')
+      }
+      checkForWin.winConditions()
+    })
   })
-})
-$(function onClick () {
-  $('#r2c3').on('click', function (event) {
-    $('#r2c3').html('X')
-    console.log('you clicked me')
+  $(function onClick () {
+    $('#6').on('click', function (event) {
+      if (count % 2 === 0) {
+        $('#6').html('O')
+      } if (count % 2 !== 0) {
+        $('#6').html('X')
+      }
+      checkForWin.winConditions()
+    })
   })
-})
-$(function onClick () {
-  $('#r3c1').on('click', function (event) {
-    $('#r3c1').html('X')
-    console.log('you clicked me')
+  $(function onClick () {
+    $('#7').on('click', function (event) {
+      if (count % 2 === 0) {
+        $('#7').html('O')
+      } if (count % 2 !== 0) {
+        $('#7').html('X')
+      }
+      checkForWin.winConditions()
+    })
   })
-})
-$(function onClick () {
-  $('#r3c2').on('click', function (event) {
-    $('#r3c2').html('X')
-    console.log('you clicked me')
+  $(function onClick () {
+    $('#8').on('click', function (event) {
+      if (count % 2 === 0) {
+        $('#8').html('O')
+      } if (count % 2 !== 0) {
+        $('#8').html('X')
+      }
+      checkForWin.winConditions()
+    })
   })
-})
-$(function onClick () {
-  $('#r3c3').on('click', function (event) {
-    $('#r3c3').html('X')
-    console.log('you clicked me')
+  $(function onClick () {
+    $('#9').on('click', function (event) {
+      if (count % 2 === 0) {
+        $('#9').html('O')
+      } if (count % 2 !== 0) {
+        $('#9').html('X')
+      }
+      checkForWin.winConditions()
+    })
   })
-})
+}
