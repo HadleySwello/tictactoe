@@ -20,6 +20,8 @@ h1 {
 }
 
 p {
+  page-break-after: always;
+  page-break-before: always;
   text-align: center;
 }
 
@@ -28,6 +30,8 @@ button {
   border-color: $darker-pond-green;
   color: $bark-brown;
   margin: auto;
+  page-break-after: always;
+  page-break-before: always;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -39,6 +43,8 @@ button {
   border-style: solid;
   justify-content: center;
   margin: 0 auto;
+  page-break-after: always;
+  page-break-before: always;
   text-align: center;
   width: 35%;
 
@@ -52,4 +58,21 @@ button {
     padding: 30px;
     text-align: center;
   }
+}
+
+#message {
+  border-style: ridge;
+  border-color: $dark-fawn;
+}
+
+#sign-up {
+  text-align: center;
+}
+
+#sign-in {
+  text-align: center;
+}
+
+#change-password {
+  text-align: center;
 }
