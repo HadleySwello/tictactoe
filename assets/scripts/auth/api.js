@@ -2,7 +2,7 @@
 
 const signUp = (data) => {
   return $.ajax({
-    url: 'http://tic-tac-toe.wdibos.com/sign-up',
+    url: 'https://tic-tac-toe.wdibos.com/sign-up',
     method: 'POST',
     data: {
       'credentials': {
@@ -16,7 +16,7 @@ const signUp = (data) => {
 
 const signIn = (data) => {
   return $.ajax({
-    url: 'http://tic-tac-toe.wdibos.com/sign-in',
+    url: 'https://tic-tac-toe.wdibos.com/sign-in',
     method: 'POST',
     data: {
       'credentials': {
@@ -29,7 +29,7 @@ const signIn = (data) => {
 
 const changePassword = (data) => {
   return $.ajax({
-    url: 'http://tic-tac-toe.wdibos.com/change-password',
+    url: 'https://tic-tac-toe.wdibos.com/change-password',
     method: 'PATCH',
     data: {
       'passwords': {
