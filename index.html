@@ -21,6 +21,40 @@
 
       <p>This is a lovely little tic tac toe game, it doesnt actually do anything yet but just you wait! Soon itll have all sorts of features and bugs.</p>
 
+      <div>
+        <form id="sign-up">
+          <fieldset>
+            <legend>Sign Up Below</legend>
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Create Password">
+            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <input type="submit" name="submit" value="Sign Up!">
+          </fieldset>
+        </form>
+      </div>
+
+      <div>
+        <form id="sign-in">
+          <fieldset>
+            <legend>Login Below</legend>
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" name="submit" value="Sign In!">
+          </fieldset>
+        </form>
+      </div>
+
+      <div>
+        <form id="change-password">
+          <fieldset>
+            <legend>Login Below</legend>
+            <input type="password" name="credentials[password]" placeholder="Old Password">
+            <input type="password" name="credentials[password]" placeholder="New Password">
+            <input type="submit" name="submit" value="Submit Changes">
+          </fieldset>
+        </form>
+      </div>
+
       <div class="container">
         <div class="row">
           <div class="item col-xs-4 box" id="1">.</div>
