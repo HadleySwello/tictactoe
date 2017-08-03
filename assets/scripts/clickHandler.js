@@ -1,3 +1,4 @@
+const checkForWin = require('./game-win.js')
 let count = 0
 
 $(function counter () {
@@ -9,59 +10,101 @@ $(function counter () {
 })
 
 $(function onClick () {
-  $('#r1c1').on('click', function (event) {
+  $('#1').on('click', function (event) {
     if (count % 2 === 0) {
-      $('#r1c1').html('O')
-    } if (count % 2 !== 0) {
-      $('#r1c1').html('X')
+      $('#1').html('O').off()
     }
+    if (count % 2 !== 0) {
+      $('#1').html('X').off()
+    }
+    checkForWin.winConditions()
   })
 })
 $(function onClick () {
-  $('#r1c2').on('click', function (event) {
-    $('#r1c2').html('X')
-    console.log('you clicked me')
+  $('#2').on('click', function (event) {
+    if (count % 2 === 0) {
+      $('#2').html('O').off()
+    }
+    if (count % 2 !== 0) {
+      $('#2').html('X').off()
+    }
+    checkForWin.winConditions()
   })
 })
 $(function onClick () {
-  $('#r1c3').on('click', function (event) {
-    $('#r1c3').html('X')
-    console.log('you clicked me')
+  $('#3').on('click', function (event) {
+    if (count % 2 === 0) {
+      $('#3').html('O').off()
+    }
+    if (count % 2 !== 0) {
+      $('#3').html('X').off()
+    }
+    checkForWin.winConditions()
   })
 })
 $(function onClick () {
-  $('#r2c1').on('click', function (event) {
-    $('#r2c1').html('X')
-    console.log('you clicked me')
+  $('#4').on('click', function (event) {
+    if (count % 2 === 0) {
+      $('#4').html('O').off()
+    }
+    if (count % 2 !== 0) {
+      $('#4').html('X').off()
+    }
+    checkForWin.winConditions()
   })
 })
 $(function onClick () {
-  $('#r2c2').on('click', function (event) {
-    $('#r2c2').html('X')
-    console.log('you clicked me')
+  $('#5').on('click', function (event) {
+    if (count % 2 === 0) {
+      $('#5').html('O').off()
+    }
+    if (count % 2 !== 0) {
+      $('#5').html('X').off()
+    }
+    checkForWin.winConditions()
   })
 })
 $(function onClick () {
-  $('#r2c3').on('click', function (event) {
-    $('#r2c3').html('X')
-    console.log('you clicked me')
+  $('#6').on('click', function (event) {
+    if (count % 2 === 0) {
+      $('#6').html('O').off()
+    }
+    if (count % 2 !== 0) {
+      $('#6').html('X').off()
+    }
+    checkForWin.winConditions()
   })
 })
 $(function onClick () {
-  $('#r3c1').on('click', function (event) {
-    $('#r3c1').html('X')
-    console.log('you clicked me')
+  $('#7').on('click', function (event) {
+    if (count % 2 === 0) {
+      $('#7').html('O').off()
+    }
+    if (count % 2 !== 0) {
+      $('#7').html('X').off()
+    }
+    checkForWin.winConditions()
   })
 })
 $(function onClick () {
-  $('#r3c2').on('click', function (event) {
-    $('#r3c2').html('X')
-    console.log('you clicked me')
+  $('#8').on('click', function (event) {
+    if (count % 2 === 0) {
+      $('#8').html('O').off()
+    }
+    if (count % 2 !== 0) {
+      $('#8').html('X').off()
+    }
+    checkForWin.winConditions()
   })
 })
 $(function onClick () {
-  $('#r3c3').on('click', function (event) {
-    $('#r3c3').html('X')
-    console.log('you clicked me')
+  $('#9').on('click', function (event) {
+    if (count % 2 === 0) {
+      $('#9').html('O').off()
+    }
+    if (count % 2 !== 0) {
+      $('#9').html('X').off()
+    }
+    checkForWin.winConditions()
   })
 })

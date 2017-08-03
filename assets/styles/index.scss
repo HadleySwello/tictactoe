@@ -24,19 +24,22 @@ p {
 }
 
 .container {
-  border-color: $lighter-pond-green;
+  border-color: $dark-fawn;
   border-radius: 20px;
   border-style: solid;
   justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 35%;
 
   .item {
-    max-height: 150px;
-    max-width: auto;
-    padding: 30px;
+    border-color: $darker-pond-green;
+    border-radius: 50%;
     border-style: solid;
     margin: auto;
-    border-radius: 5px;
-    border-color: $darker-pond-green;
+    max-height: 50px;
+    max-width: 50px;
+    padding: 30px;
     text-align: center;
   }
 }
