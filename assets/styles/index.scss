@@ -23,6 +23,16 @@ p {
   text-align: center;
 }
 
+button {
+  background-color: $darker-pond-green;
+  border-color: $darker-pond-green;
+  color: $bark-brown;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+}
+
 .container {
   border-color: $dark-fawn;
   border-radius: 20px;

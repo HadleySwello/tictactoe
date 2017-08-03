@@ -8,6 +8,7 @@
 require('./assets/scripts/index.js')
 require('./assets/scripts/makeMoves.js')
 require('./assets/scripts/clickHandler.js')
+require('./assets/scripts/message.js')
 
 // styles
 require('./assets/styles/index.scss')
