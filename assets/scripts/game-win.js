@@ -36,6 +36,8 @@ const winConditions = function (id, player) {
     message('Player One Wins!')
   } else if ($('#3').html() === 'O' && $('#5').html() === 'O' && $('#7').html() === 'O') {
     message('Player Two Wins!')
+  } else if (count === 9) {
+    message('Cats Game')
   }
 }
 

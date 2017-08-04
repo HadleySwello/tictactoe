@@ -12,14 +12,17 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 body {
   background-color: $blue-gray;
   color: $lighter-pond-green;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 h1 {
   color: $lighter-pond-green;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
 }
 
 p {
+  font-family: 'Josefin Sans', sans-serif;
   page-break-after: always;
   page-break-before: always;
   text-align: center;
@@ -29,6 +32,7 @@ button {
   background-color: $darker-pond-green;
   border-color: $darker-pond-green;
   color: $bark-brown;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
 }
 
@@ -36,6 +40,7 @@ button {
   border-color: $dark-fawn;
   border-radius: 20px;
   border-style: solid;
+  font-family: 'Josefin Sans', sans-serif;
   justify-content: center;
   margin: 0 auto;
   page-break-after: always;
@@ -43,10 +48,12 @@ button {
   text-align: center;
   width: 35%;
 
+
   .item {
     border-color: $darker-pond-green;
     border-radius: 50%;
     border-style: solid;
+    font-family: 'Josefin Sans', sans-serif;
     margin: auto;
     max-height: 50px;
     max-width: 50px;
@@ -61,13 +68,20 @@ button {
 }
 
 #sign-up {
+  color: $darker-pond-green;
   text-align: center;
 }
 
 #sign-in {
+  color: $darker-pond-green;
   text-align: center;
 }
 
 #change-password {
+  color: $darker-pond-green;
   text-align: center;
+}
+
+legend {
+  color: $darker-pond-green;
 }
