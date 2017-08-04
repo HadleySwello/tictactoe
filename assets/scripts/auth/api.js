@@ -2,7 +2,7 @@
 
 const signUp = (data) => {
   return $.ajax({
-    url: 'http://tic-tac-toe.wdibos.com/sign-up',
+    url: 'https://tic-tac-toe.wdibos.com/sign-up',
     // url: 'http://localhost:4741/sign-up',
     method: 'POST',
     data: {
@@ -17,7 +17,7 @@ const signUp = (data) => {
 
 const signIn = (data) => {
   return $.ajax({
-    url: 'http://tic-tac-toe.wdibos.com/sign-in',
+    url: 'https://tic-tac-toe.wdibos.com/sign-in',
     // url: 'http://localhost:4741/sign-in',
     method: 'POST',
     data: {
