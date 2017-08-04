@@ -2,7 +2,7 @@
 
 const signUp = (data) => {
   return $.ajax({
-    url: 'https://tic-tac-toe.wdibos.com/sign-up',
+    url: 'https://aqueous-atoll-85096.herokuapp.com/sign-up',
     // url: 'http://localhost:4741/sign-up',
     method: 'POST',
     data: {
@@ -17,7 +17,7 @@ const signUp = (data) => {
 
 const signIn = (data) => {
   return $.ajax({
-    url: 'https://tic-tac-toe.wdibos.com/sign-in',
+    url: 'https://aqueous-atoll-85096.herokuapp.com/sign-in',
     // url: 'http://localhost:4741/sign-in',
     method: 'POST',
     data: {
@@ -33,17 +33,14 @@ const changePassword = (data) => {
   console.log(data)
   return $.ajax({
     // url: 'https://tic-tac-toe.wdibos.com/change-password',
-    url: app.host + '/change-password' + app.user.id,
-    headers: {
-      Authorization: 'Token token=' + app.user.token,
-    },
-    method: 'PATCH'
-    // data: {
-    //   'passwords': {
-    //     'old': data.password.old,
-    //     'new': data.password.new
-    //   }
-  })
+    url: 'https://aqueous-atoll-85096.herokuapp.com/change-password',
+    method: 'PATCH',
+    data: {
+      'passwords': {
+        'old': data.password.old,
+        'new': data.password.new
+      }
+    }})
 }
 
 module.exports = {
