@@ -1,4 +1,5 @@
 'use strict'
+const app = require('../../../app.js')
 
 const signUp = (data) => {
   return $.ajax({
@@ -32,15 +33,18 @@ const signIn = (data) => {
 const changePassword = (data) => {
   console.log(data)
   return $.ajax({
-    // url: 'https://tic-tac-toe.wdibos.com/change-password',
-    url: 'https://aqueous-atoll-85096.herokuapp.com/change-password',
+    url: app.host + '/change-password/' + app.user.id,
+    // url: 'http://localhost:4741/change-password',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
     method: 'PATCH',
-    data: {
-      'passwords': {
-        'old': data.password.old,
-        'new': data.password.new
-      }
-    }})
+    data
+    // : {
+    //   'passwords': {
+    //     'old': data.password.old,
+    //     'new': data.password.new
+  })
 }
 
 module.exports = {
