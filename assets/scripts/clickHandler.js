@@ -2,6 +2,19 @@
 
 const checkForWin = require('./game-win.js')
 
+const squares = $('.item')
+
+let cells
+
+const pushCells = function () {
+  cells = ($(squares).text()
+    .toLowerCase()
+    .split('')
+
+  )
+  return cells
+}
+
 const createBoard = function () {
   $('#message').text('I Give You Game Information!')
   let count = 0
@@ -21,6 +34,8 @@ const createBoard = function () {
         $('#1').html('X').off()
       }
       checkForWin.winConditions()
+      pushCells()
+      console.log(cells)
     })
   })
   $(function onClick () {
@@ -32,6 +47,8 @@ const createBoard = function () {
         $('#2').html('X').off()
       }
       checkForWin.winConditions()
+      pushCells()
+      console.log(cells)
     })
   })
   $(function onClick () {
@@ -43,6 +60,8 @@ const createBoard = function () {
         $('#3').html('X').off()
       }
       checkForWin.winConditions()
+      pushCells()
+      console.log(cells)
     })
   })
   $(function onClick () {
@@ -54,6 +73,8 @@ const createBoard = function () {
         $('#4').html('X').off()
       }
       checkForWin.winConditions()
+      pushCells()
+      console.log(cells)
     })
   })
   $(function onClick () {
@@ -65,6 +86,8 @@ const createBoard = function () {
         $('#5').html('X').off()
       }
       checkForWin.winConditions()
+      pushCells()
+      console.log(cells)
     })
   })
   $(function onClick () {
@@ -76,6 +99,8 @@ const createBoard = function () {
         $('#6').html('X').off()
       }
       checkForWin.winConditions()
+      pushCells()
+      console.log(cells)
     })
   })
   $(function onClick () {
@@ -87,6 +112,8 @@ const createBoard = function () {
         $('#7').html('X').off()
       }
       checkForWin.winConditions()
+      pushCells()
+      console.log(cells)
     })
   })
   $(function onClick () {
@@ -98,6 +125,8 @@ const createBoard = function () {
         $('#8').html('X').off()
       }
       checkForWin.winConditions()
+      pushCells()
+      console.log(cells)
     })
   })
   $(function onClick () {
@@ -109,13 +138,16 @@ const createBoard = function () {
         $('#9').html('X').off()
       }
       checkForWin.winConditions()
+      pushCells()
+      console.log(cells)
     })
   })
 }
 
 $(function newGame () {
-  $('button').on('click', function (event) {
+  $('#reset').on('click', function (event) {
     createBoard()
-    $('.item').html('.')
+    $('.item').html(' ')
+    cells = []
   })
 })

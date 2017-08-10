@@ -48,33 +48,37 @@
         <form id="change-password">
           <fieldset>
             <legend>Change Password Below</legend>
-            <input type="password" name="credentials[password]" placeholder="Old Password">
-            <input type="password" name="credentials[password]" placeholder="New Password">
+            <input type="password" name="credentials[old]" placeholder="Old Password">
+            <input type="password" name="credentials[new]" placeholder="New Password">
             <input type="submit" name="submit" value="Submit Changes">
           </fieldset>
         </form>
       </div>
 
+      <form class="sign-out" id="signOut">
+      <button id="sign-out" type="submit" disabled> Sign Out </button>
+      </form>
+
       <p id="message">I Give You Game Information!</p>
 
       <div class="container">
         <div class="row">
-          <div class="item col-xs-4 box" id="1">.</div>
-          <div class="item col-xs-4 box" id="2">.</div>
-          <div class="item col-xs-4 box" id="3">.</div>
+          <div class="item col-xs-4 box" id="1"> </div>
+          <div class="item col-xs-4 box" id="2"> </div>
+          <div class="item col-xs-4 box" id="3"> </div>
        </div>
        <div class="row">
-         <div class="item col-xs-4 box" id="4">.</div>
-         <div class="item col-xs-4 box" id="5">.</div>
-         <div class="item col-xs-4 box" id="6">.</div>
+         <div class="item col-xs-4 box" id="4"> </div>
+         <div class="item col-xs-4 box" id="5"> </div>
+         <div class="item col-xs-4 box" id="6"> </div>
        </div>
        <div class="row">
-         <div class="item col-xs-4 box" id="7">.</div>
-         <div class="item col-xs-4 box" id="8">.</div>
-         <div class="item col-xs-4 box" id="9">.</div>
+         <div class="item col-xs-4 box" id="7"> </div>
+         <div class="item col-xs-4 box" id="8"> </div>
+         <div class="item col-xs-4 box" id="9"> </div>
        </div>
       </div>
-        <button type="reset">New Game</button>
+        <button id="reset" type="reset">New Game</button>
     </body>
 
 </html>

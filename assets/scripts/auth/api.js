@@ -3,8 +3,8 @@ const app = require('../../../app.js')
 
 const signUp = (data) => {
   return $.ajax({
-    url: 'https://aqueous-atoll-85096.herokuapp.com/sign-up',
-    // url: 'http://localhost:4741/sign-up',
+    // url: 'https://aqueous-atoll-85096.herokuapp.com/sign-up',
+    url: 'http://localhost:4741/sign-up',
     method: 'POST',
     data: {
       'credentials': {
@@ -18,8 +18,8 @@ const signUp = (data) => {
 
 const signIn = (data) => {
   return $.ajax({
-    url: 'https://aqueous-atoll-85096.herokuapp.com/sign-in',
-    // url: 'http://localhost:4741/sign-in',
+    // url: 'https://aqueous-atoll-85096.herokuapp.com/sign-in',
+    url: 'http://localhost:4741/sign-in',
     method: 'POST',
     data: {
       'credentials': {
@@ -31,7 +31,8 @@ const signIn = (data) => {
 }
 
 const changePassword = (data) => {
-  console.log(data)
+  console.log(data.credentials.old)
+  console.log(data.credentials.new)
   return $.ajax({
     url: app.host + '/change-password/' + app.user.id,
     // url: 'http://localhost:4741/change-password',
@@ -39,16 +40,29 @@ const changePassword = (data) => {
       Authorization: 'Token token=' + app.user.token
     },
     method: 'PATCH',
-    data
-    // : {
-    //   'passwords': {
-    //     'old': data.password.old,
-    //     'new': data.password.new
+    data: {
+      'passwords': {
+        'old': data.credentials.old,
+        'new': data.credentials.new
+      }
+    }
+  })
+}
+
+const signOut = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/sign-out/' + app.user.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
   })
 }
 
 module.exports = {
   signIn,
   signUp,
-  changePassword
+  changePassword,
+  signOut
 }
