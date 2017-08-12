@@ -21,17 +21,16 @@ const message = function (msg) {
 }
 let over
 
-let count = 0
-$(function counter () {
-  console.log('im counting')
-  $('.item').on('click', function () {
-    count += 1
-    console.log(count)
-  })
-})
-
 const createBoard = function () {
   $('#message').text('I Give You Game Information!')
+  let count = 0
+  $(function counter () {
+    console.log('im counting')
+    $('.item').on('click', function () {
+      count += 1
+      console.log(count)
+    })
+  })
 
   $(function onClick () {
     $('#1').on('click', function (event) {
@@ -188,6 +187,61 @@ const createBoard = function () {
       // console.log(cells)
     })
   })
+  const winConditions = function (id, player) {
+    if ($('#1').html() === 'X' && $('#2').html() === 'X' && $('#3').html() === 'X') {
+      message('Player One Wins!')
+      over = true
+    } else if ($('#1').html() === 'O' && $('#2').html() === 'O' && $('#3').html() === 'O') {
+      message('Player Two Wins!')
+      over = true
+    } else if ($('#1').html() === 'X' && $('#4').html() === 'X' && $('#7').html() === 'X') {
+      message('Player One Wins!')
+      over = true
+    } else if ($('#1').html() === 'O' && $('#4').html() === 'O' && $('#7').html() === 'O') {
+      message('Player Two Wins!')
+      over = true
+    } else if ($('#1').html() === 'X' && $('#5').html() === 'X' && $('#9').html() === 'X') {
+      message('Player One Wins!')
+      over = true
+    } else if ($('#1').html() === 'O' && $('#5').html() === 'O' && $('#9').html() === 'O') {
+      message('Player Two Wins!')
+      over = true
+    } else if ($('#2').html() === 'X' && $('#5').html() === 'X' && $('#8').html() === 'X') {
+      message('Player One Wins!')
+      over = true
+    } else if ($('#2').html() === 'O' && $('#5').html() === 'O' && $('#8').html() === 'O') {
+      message('Player Two Wins!')
+      over = true
+    } else if ($('#3').html() === 'X' && $('#6').html() === 'X' && $('#9').html() === 'X') {
+      message('Player One Wins!')
+      over = true
+    } else if ($('#3').html() === 'O' && $('#6').html() === 'O' && $('#9').html() === 'O') {
+      message('Player Two Wins!')
+      over = true
+    } else if ($('#4').html() === 'X' && $('#5').html() === 'X' && $('#6').html() === 'X') {
+      message('Player One Wins!')
+      over = true
+    } else if ($('#4').html() === 'O' && $('#5').html() === 'O' && $('#6').html() === 'O') {
+      message('Player Two Wins!')
+      over = true
+    } else if ($('#7').html() === 'X' && $('#8').html() === 'X' && $('#9').html() === 'X') {
+      message('Player One Wins!')
+      over = true
+    } else if ($('#7').html() === 'O' && $('#8').html() === 'O' && $('#9').html() === 'O') {
+      message('Player Two Wins!')
+      over = true
+    } else if ($('#3').html() === 'X' && $('#5').html() === 'X' && $('#7').html() === 'X') {
+      message('Player One Wins!')
+      over = true
+    } else if ($('#3').html() === 'O' && $('#5').html() === 'O' && $('#7').html() === 'O') {
+      message('Player Two Wins!')
+      over = true
+    } else if (count === 9) {
+      message('Cats Game')
+      over = true
+    }
+    return over
+  }
 }
 
 $(function newGame () {
@@ -197,62 +251,6 @@ $(function newGame () {
     cells = []
   })
 })
-
-const winConditions = function (id, player) {
-  if ($('#1').html() === 'X' && $('#2').html() === 'X' && $('#3').html() === 'X') {
-    message('Player One Wins!')
-    over = true
-  } else if ($('#1').html() === 'O' && $('#2').html() === 'O' && $('#3').html() === 'O') {
-    message('Player Two Wins!')
-    over = true
-  } else if ($('#1').html() === 'X' && $('#4').html() === 'X' && $('#7').html() === 'X') {
-    message('Player One Wins!')
-    over = true
-  } else if ($('#1').html() === 'O' && $('#4').html() === 'O' && $('#7').html() === 'O') {
-    message('Player Two Wins!')
-    over = true
-  } else if ($('#1').html() === 'X' && $('#5').html() === 'X' && $('#9').html() === 'X') {
-    message('Player One Wins!')
-    over = true
-  } else if ($('#1').html() === 'O' && $('#5').html() === 'O' && $('#9').html() === 'O') {
-    message('Player Two Wins!')
-    over = true
-  } else if ($('#2').html() === 'X' && $('#5').html() === 'X' && $('#8').html() === 'X') {
-    message('Player One Wins!')
-    over = true
-  } else if ($('#2').html() === 'O' && $('#5').html() === 'O' && $('#8').html() === 'O') {
-    message('Player Two Wins!')
-    over = true
-  } else if ($('#3').html() === 'X' && $('#6').html() === 'X' && $('#9').html() === 'X') {
-    message('Player One Wins!')
-    over = true
-  } else if ($('#3').html() === 'O' && $('#6').html() === 'O' && $('#9').html() === 'O') {
-    message('Player Two Wins!')
-    over = true
-  } else if ($('#4').html() === 'X' && $('#5').html() === 'X' && $('#6').html() === 'X') {
-    message('Player One Wins!')
-    over = true
-  } else if ($('#4').html() === 'O' && $('#5').html() === 'O' && $('#6').html() === 'O') {
-    message('Player Two Wins!')
-    over = true
-  } else if ($('#7').html() === 'X' && $('#8').html() === 'X' && $('#9').html() === 'X') {
-    message('Player One Wins!')
-    over = true
-  } else if ($('#7').html() === 'O' && $('#8').html() === 'O' && $('#9').html() === 'O') {
-    message('Player Two Wins!')
-    over = true
-  } else if ($('#3').html() === 'X' && $('#5').html() === 'X' && $('#7').html() === 'X') {
-    message('Player One Wins!')
-    over = true
-  } else if ($('#3').html() === 'O' && $('#5').html() === 'O' && $('#7').html() === 'O') {
-    message('Player Two Wins!')
-    over = true
-  } else if (count === 9) {
-    message('Cats Game')
-    over = true
-  }
-  return over
-}
 
 module.exports = {
   createBoard

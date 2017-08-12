@@ -78,6 +78,7 @@ const getHistorySuccess = (data) => {
 }
 
 const getHistoryFailure = (error) => {
+  $('.oldGames').html('You have not played games before')
   console.log(error)
   console.log('Failed')
 }
