@@ -1,6 +1,6 @@
 'use strict'
-const app = require('./../../app.js')
-const config = require('./../config')
+const app = require('../../../app.js')
+const config = require('../config')
 
 const signUp = (data) => {
   return $.ajax({
@@ -82,7 +82,7 @@ const createGame = (data) => {
 
 const updateGame = (index, val, over) => {
   return $.ajax({
-    url: config.production + '/games/' + app.user.id,
+    url: config.pro + '/games/' + app.user.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
