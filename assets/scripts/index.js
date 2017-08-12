@@ -21,4 +21,5 @@ $(() => {
   $('#signOut').on('submit', gameEvents.onSignOut)
   $('#reset').on('click', gameEvents.onCreateGame)
   $('.item').on('click', gameEvents.onUpdateGame)
+  $('#getHistory').on('click', gameEvents.onGetHistory)
 })

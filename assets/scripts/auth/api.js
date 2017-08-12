@@ -81,19 +81,25 @@ const createGame = (data) => {
 //   })
 // }
 
-const updateGame = (data) => {
-  console.log(data)
+const updateGame = (index, val, over) => {
   return $.ajax({
     url: app.host + '/games/' + app.user.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'game': {
+        'cell': {
+          'index': index,
+          'value': val
+        },
+        'over': over
+      }
     }
   })
 }
-
 const getHistory = (data) => {
-  console.log(data)
   return $.ajax({
     url: app.host + '/games/' + app.user.id,
     method: 'GET',

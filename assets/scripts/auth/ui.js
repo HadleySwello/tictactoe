@@ -13,7 +13,6 @@ const signUpFailure = (error) => {
 
 const signInSuccess = (data) => {
   $('#sign-out').prop('disabled', false)
-  console.log(data)
   app.user = data.user
   console.log(app.user.token)
 }
@@ -72,7 +71,9 @@ const createGameFailure = (error) => {
 }
 
 const getHistorySuccess = (data) => {
-  console.log(data)
+  $('.oldGames').html('You have played games before user ' + data.game.id)
+  console.log('look here')
+  console.log(data.id)
   console.log('Succeded')
 }
 
