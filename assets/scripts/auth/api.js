@@ -1,9 +1,10 @@
 'use strict'
 const app = require('../../../app.js')
+const config = require('../config')
 
 const signUp = (data) => {
   return $.ajax({
-    url: app.host + '/sign-up/',
+    url: config.apiOrigin + '/sign-up/',
     method: 'POST',
     data: {
       'credentials': {
@@ -17,7 +18,7 @@ const signUp = (data) => {
 
 const signIn = (data) => {
   return $.ajax({
-    url: app.host + '/sign-in/',
+    url: config.apiOrigin + '/sign-in/',
     method: 'POST',
     data: {
       'credentials': {
@@ -32,7 +33,7 @@ const changePassword = (data) => {
   console.log(data.credentials.old)
   console.log(data.credentials.new)
   return $.ajax({
-    url: app.host + '/change-password/' + app.user.id,
+    url: config.apiOrigin + '/change-password/' + app.user.id,
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -49,7 +50,7 @@ const changePassword = (data) => {
 const signOut = (data) => {
   console.log(data)
   return $.ajax({
-    url: app.host + '/sign-out/' + app.user.id,
+    url: config.apiOrigin + '/sign-out/' + app.user.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -60,7 +61,7 @@ const signOut = (data) => {
 const createGame = (data) => {
   console.log(data)
   return $.ajax({
-    url: app.host + '/games/',
+    url: config.apiOrigin + '/games/',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -81,7 +82,7 @@ const createGame = (data) => {
 
 const updateGame = (index, val, over) => {
   return $.ajax({
-    url: 'https://aqueous-atoll-85096.herokuapp.com/games/' + app.user.id,
+    url: config.apiOrigin + '/games/' + app.user.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -99,7 +100,7 @@ const updateGame = (index, val, over) => {
 }
 const getHistory = (data) => {
   return $.ajax({
-    url: 'https://aqueous-atoll-85096.herokuapp.com/games/' + app.user.id,
+    url: config.apiOrigin + '/games/' + app.user.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token
