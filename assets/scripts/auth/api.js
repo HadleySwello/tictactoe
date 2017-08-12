@@ -35,7 +35,6 @@ const changePassword = (data) => {
   console.log(data.credentials.new)
   return $.ajax({
     url: app.host + '/change-password/' + app.user.id,
-    // url: 'http://localhost:4741/change-password',
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -60,9 +59,56 @@ const signOut = (data) => {
   })
 }
 
+const createGame = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/games/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+// const loadGame = (data) => {
+//   console.log(data)
+//   return $.ajax({
+//     url: app.host + '/games/' + app.user.id,
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + app.user.token
+//     }
+//   })
+// }
+
+const updateGame = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/games/' + app.user.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const getHistory = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/games/' + app.user.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 module.exports = {
   signIn,
   signUp,
   changePassword,
-  signOut
+  signOut,
+  createGame,
+  updateGame,
+  getHistory
 }

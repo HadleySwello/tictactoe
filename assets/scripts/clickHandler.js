@@ -1,9 +1,10 @@
 'use strict'
 
-const checkForWin = require('./game-win.js')
-
+const updateGame = require('./auth/events.js')
+console.log(updateGame)
 const squares = $('.item')
-
+let val
+let index
 let cells
 
 const pushCells = function () {
@@ -13,6 +14,67 @@ const pushCells = function () {
 
   )
   return cells
+}
+
+const message = function (msg) {
+  $('#message').text(msg)
+}
+let over
+
+const winConditions = function (id, player) {
+  if ($('#1').html() === 'X' && $('#2').html() === 'X' && $('#3').html() === 'X') {
+    message('Player One Wins!')
+    over = true
+  } else if ($('#1').html() === 'O' && $('#2').html() === 'O' && $('#3').html() === 'O') {
+    message('Player Two Wins!')
+    over = true
+  } else if ($('#1').html() === 'X' && $('#4').html() === 'X' && $('#7').html() === 'X') {
+    message('Player One Wins!')
+    over = true
+  } else if ($('#1').html() === 'O' && $('#4').html() === 'O' && $('#7').html() === 'O') {
+    message('Player Two Wins!')
+    over = true
+  } else if ($('#1').html() === 'X' && $('#5').html() === 'X' && $('#9').html() === 'X') {
+    message('Player One Wins!')
+    over = true
+  } else if ($('#1').html() === 'O' && $('#5').html() === 'O' && $('#9').html() === 'O') {
+    message('Player Two Wins!')
+    over = true
+  } else if ($('#2').html() === 'X' && $('#5').html() === 'X' && $('#8').html() === 'X') {
+    message('Player One Wins!')
+    over = true
+  } else if ($('#2').html() === 'O' && $('#5').html() === 'O' && $('#8').html() === 'O') {
+    message('Player Two Wins!')
+    over = true
+  } else if ($('#3').html() === 'X' && $('#6').html() === 'X' && $('#9').html() === 'X') {
+    message('Player One Wins!')
+    over = true
+  } else if ($('#3').html() === 'O' && $('#6').html() === 'O' && $('#9').html() === 'O') {
+    message('Player Two Wins!')
+    over = true
+  } else if ($('#4').html() === 'X' && $('#5').html() === 'X' && $('#6').html() === 'X') {
+    message('Player One Wins!')
+    over = true
+  } else if ($('#4').html() === 'O' && $('#5').html() === 'O' && $('#6').html() === 'O') {
+    message('Player Two Wins!')
+    over = true
+  } else if ($('#7').html() === 'X' && $('#8').html() === 'X' && $('#9').html() === 'X') {
+    message('Player One Wins!')
+    over = true
+  } else if ($('#7').html() === 'O' && $('#8').html() === 'O' && $('#9').html() === 'O') {
+    message('Player Two Wins!')
+    over = true
+  } else if ($('#3').html() === 'X' && $('#5').html() === 'X' && $('#7').html() === 'X') {
+    message('Player One Wins!')
+    over = true
+  } else if ($('#3').html() === 'O' && $('#5').html() === 'O' && $('#7').html() === 'O') {
+    message('Player Two Wins!')
+    over = true
+  } else { over = false }
+  return over
+  // } else if (count === 9){
+  //   message('Cats Game')
+  // }
 }
 
 const createBoard = function () {
@@ -33,7 +95,12 @@ const createBoard = function () {
       if (count % 2 !== 0) {
         $('#1').html('X').off()
       }
-      checkForWin.winConditions()
+      winConditions()
+      console.log(over)
+      index = 0
+      val = $('#1').html()
+      console.log(updateGame)
+      updateGame.onUpdateGame(index, val, over)
       pushCells()
       console.log(cells)
     })
@@ -46,7 +113,11 @@ const createBoard = function () {
       if (count % 2 !== 0) {
         $('#2').html('X').off()
       }
-      checkForWin.winConditions()
+      winConditions()
+      console.log(over)
+      index = 1
+      val = $('#2').html()
+      updateGame.onUpdateGame(index, val, over)
       pushCells()
       console.log(cells)
     })
@@ -59,7 +130,11 @@ const createBoard = function () {
       if (count % 2 !== 0) {
         $('#3').html('X').off()
       }
-      checkForWin.winConditions()
+      winConditions()
+      console.log(over)
+      index = 2
+      val = $('#3').html()
+      updateGame.onUpdateGame(index, val, over)
       pushCells()
       console.log(cells)
     })
@@ -72,7 +147,11 @@ const createBoard = function () {
       if (count % 2 !== 0) {
         $('#4').html('X').off()
       }
-      checkForWin.winConditions()
+      winConditions()
+      console.log(over)
+      index = 3
+      val = $('#4').html()
+      updateGame.onUpdateGame(index, val, over)
       pushCells()
       console.log(cells)
     })
@@ -85,7 +164,11 @@ const createBoard = function () {
       if (count % 2 !== 0) {
         $('#5').html('X').off()
       }
-      checkForWin.winConditions()
+      winConditions()
+      console.log(over)
+      index = 4
+      val = $('#5').html()
+      updateGame.onUpdateGame(index, val, over)
       pushCells()
       console.log(cells)
     })
@@ -98,7 +181,11 @@ const createBoard = function () {
       if (count % 2 !== 0) {
         $('#6').html('X').off()
       }
-      checkForWin.winConditions()
+      winConditions()
+      console.log(over)
+      index = 5
+      val = $('#6').html()
+      updateGame.onUpdateGame(index, val, over)
       pushCells()
       console.log(cells)
     })
@@ -111,7 +198,11 @@ const createBoard = function () {
       if (count % 2 !== 0) {
         $('#7').html('X').off()
       }
-      checkForWin.winConditions()
+      winConditions()
+      console.log(over)
+      index = 6
+      val = $('#7').html()
+      updateGame.onUpdateGame(index, val, over)
       pushCells()
       console.log(cells)
     })
@@ -124,7 +215,11 @@ const createBoard = function () {
       if (count % 2 !== 0) {
         $('#8').html('X').off()
       }
-      checkForWin.winConditions()
+      winConditions()
+      console.log(over)
+      index = 7
+      val = $('#8').html()
+      updateGame.onUpdateGame(index, val, over)
       pushCells()
       console.log(cells)
     })
@@ -137,7 +232,11 @@ const createBoard = function () {
       if (count % 2 !== 0) {
         $('#9').html('X').off()
       }
-      checkForWin.winConditions()
+      winConditions()
+      console.log(over)
+      index = 8
+      val = $('#9').html()
+      updateGame.onUpdateGame(index, val, over)
       pushCells()
       console.log(cells)
     })
@@ -151,3 +250,7 @@ $(function newGame () {
     cells = []
   })
 })
+
+module.exports = {
+  createBoard
+}

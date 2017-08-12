@@ -1,6 +1,8 @@
 'use strict'
 const app = require('../../../app.js')
 
+// const gameplay = require('../clickHandler.js')
+
 const signUpSuccess = (data) => {
   console.log(data)
 }
@@ -38,6 +40,47 @@ const logOutFailure = (error) => {
   console.log('Failed')
 }
 
+// const loadGameSuccess = (data) => {
+//   console.log(data)
+//   console.log('Succeded')
+// }
+//
+// const loadGameFailure = (error) => {
+//   console.log(error)
+//   console.log('Failed')
+// }
+
+const updateGameSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded')
+}
+
+const updateGameFailure = (error) => {
+  console.log(error)
+  console.log('Failed')
+}
+
+const createGameSuccess = (data) => {
+  // gameplay.createBoard()
+  console.log(data)
+  console.log('Succeded')
+}
+
+const createGameFailure = (error) => {
+  console.log(error)
+  console.log('Failed')
+}
+
+const getHistorySuccess = (data) => {
+  console.log(data)
+  console.log('Succeded')
+}
+
+const getHistoryFailure = (error) => {
+  console.log(error)
+  console.log('Failed')
+}
+
 module.exports = {
   signUpFailure,
   signUpSuccess,
@@ -46,5 +89,11 @@ module.exports = {
   changePasswordfailure,
   changePasswordSuccess,
   logOutFailure,
-  logOutSuccess
+  logOutSuccess,
+  updateGameFailure,
+  updateGameSuccess,
+  createGameFailure,
+  createGameSuccess,
+  getHistorySuccess,
+  getHistoryFailure
 }

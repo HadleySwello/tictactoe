@@ -34,9 +34,41 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordfailure)
 }
 
+// const onLoadGame = function (event) {
+//   const data = getFormFields(this)
+//   event.preventDefault()
+//   api.loadGame(data)
+//     .then(ui.loadGameSuccess)
+//     .catch(ui.loadGameFailure)
+// }
+
+const onCreateGame = function (event) {
+  event.preventDefault()
+  api.createGame()
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
+}
+
+const onUpdateGame = function (index, val, over) {
+  api.updateGame(index, val, over)
+    .then(ui.updateGameSuccess)
+    .catch(ui.updateGameFailure)
+}
+
+const onGetHistory = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.getHistory(data)
+    .then(ui.getHistorySuccess)
+    .catch(ui.getHistoryFailure)
+}
+
 module.exports = {
   onSignIn,
   onSignUp,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onCreateGame,
+  onUpdateGame,
+  onGetHistory
 }
