@@ -82,7 +82,7 @@ const createGame = (data) => {
 
 const updateGame = (index, val, over) => {
   return $.ajax({
-    url: 'https://aqueous-atoll-85096.herokuapp.com/games/' + app.user.id,
+    url: config.apiOrigin + '/games/' + app.game.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -100,7 +100,7 @@ const updateGame = (index, val, over) => {
 }
 const getHistory = (data) => {
   return $.ajax({
-    url: 'https://aqueous-atoll-85096.herokuapp.com/games/' + app.user.id,
+    url: config.apiOrigin + '/games/' + app.game.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token
