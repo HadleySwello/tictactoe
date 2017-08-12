@@ -82,7 +82,7 @@ const createGame = (data) => {
 
 const updateGame = (index, val, over) => {
   return $.ajax({
-    url: config.pro + '/games/' + app.user.id,
+    url: config.production + '/games/' + app.user.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
