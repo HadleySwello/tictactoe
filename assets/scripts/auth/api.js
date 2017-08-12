@@ -3,8 +3,7 @@ const app = require('../../../app.js')
 
 const signUp = (data) => {
   return $.ajax({
-    // url: 'https://aqueous-atoll-85096.herokuapp.com/sign-up',
-    url: 'http://localhost:4741/sign-up',
+    url: app.host + '/sign-up/',
     method: 'POST',
     data: {
       'credentials': {
@@ -18,8 +17,7 @@ const signUp = (data) => {
 
 const signIn = (data) => {
   return $.ajax({
-    // url: 'https://aqueous-atoll-85096.herokuapp.com/sign-in',
-    url: 'http://localhost:4741/sign-in',
+    url: app.host + '/sign-in/',
     method: 'POST',
     data: {
       'credentials': {
