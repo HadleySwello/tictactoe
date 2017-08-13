@@ -50,6 +50,8 @@ const logOutFailure = (error) => {
 // }
 
 const updateGameSuccess = (data) => {
+  app.game = data.game
+  app.game.id = data.game.id
   console.log(data)
   console.log('Succeded')
 }
