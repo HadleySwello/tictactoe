@@ -60,7 +60,8 @@ const updateGameFailure = (error) => {
 }
 
 const createGameSuccess = (data) => {
-  // gameplay.createBoard()
+  app.game = data.game
+  app.game.id = data.game.id
   console.log(data)
   console.log('Succeded')
 }
