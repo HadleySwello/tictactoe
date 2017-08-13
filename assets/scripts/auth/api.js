@@ -100,7 +100,7 @@ const updateGame = (index, val, over) => {
 }
 const getHistory = (data) => {
   return $.ajax({
-    url: app.host + '/games/' + data,
+    url: app.host + '/games/' + app.user.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token
