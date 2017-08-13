@@ -72,7 +72,7 @@ const createGameFailure = (error) => {
 }
 
 const getHistorySuccess = (data) => {
-  $('.oldGames').html('You have played games before user ' + app.game.id)
+  $('.oldGames').html('You have played games before user ' + app.user.id)
   console.log('look here')
   console.log(data.id)
   console.log('Succeded')
