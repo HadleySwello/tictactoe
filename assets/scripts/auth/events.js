@@ -56,9 +56,8 @@ const onUpdateGame = function (index, val, over) {
 }
 
 const onGetHistory = function (event) {
-  const data = getFormFields(this)
   event.preventDefault()
-  api.getHistory(data)
+  api.getHistory()
     .then(ui.getHistorySuccess)
     .catch(ui.getHistoryFailure)
 }
