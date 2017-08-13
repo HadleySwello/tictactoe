@@ -50,8 +50,6 @@ const logOutFailure = (error) => {
 // }
 
 const updateGameSuccess = (data) => {
-  app.game = data.game
-  app.game.id = data.game.id
   console.log(data)
   console.log('Succeded')
 }
@@ -74,7 +72,7 @@ const createGameFailure = (error) => {
 }
 
 const getHistorySuccess = (data) => {
-  $('.oldGames').html('You have played games before user ' + data.game.id)
+  $('.oldGames').html('You have played games before user ' + app.game.id)
   console.log('look here')
   console.log(data.id)
   console.log('Succeded')
