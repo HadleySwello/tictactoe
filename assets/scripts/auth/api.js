@@ -69,17 +69,6 @@ const createGame = (data) => {
   })
 }
 
-// const loadGame = (data) => {
-//   console.log(data)
-//   return $.ajax({
-//     url: app.host + '/games/' + app.user.id,
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + app.user.token
-//     }
-//   })
-// }
-
 const updateGame = (index, val, over) => {
   return $.ajax({
     url: app.host + '/games/' + app.game.id,

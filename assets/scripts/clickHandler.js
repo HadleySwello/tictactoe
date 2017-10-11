@@ -5,6 +5,7 @@ console.log(updateGame)
 const squares = $('.item')
 let val
 let index
+let over
 let cells
 
 const pushCells = function () {
@@ -19,7 +20,6 @@ const pushCells = function () {
 const message = function (msg) {
   $('#message').text(msg)
 }
-let over
 
 const createBoard = function () {
   $('#message').text('I Give You Game Information!')
